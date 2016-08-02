@@ -28,10 +28,7 @@ public class DataAnalysis {
             sum = sum + items[i];
         }
         //find max/min value
-        Arrays.sort(items);
-        int min = items[0];
-        int max = items[items.length - 1];
-
+        
         mean = (double) sum/items.length;
         System.out.println("Mean value of array element is " + mean);
         System.out.println("Max value of array element is " + max);

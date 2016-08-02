@@ -11,8 +11,8 @@ public class DayConvert {
         System.out.print("Enter month, day, and year(MM/DD/YYYY): ");
         Scanner sc = new Scanner(System.in);
         String line = sc.nextLine();
-        boolean timeToQuit = line.equalsIgnoreCase("quit");
-        while (!timeToQuit){
+        //boolean timeToQuit = "quit".equalsIgnoreCase(line);
+        while (!"quit".equalsIgnoreCase(line)){
             //get day month year print out
             int month = Integer.parseInt(line.substring(0,2));
             int day = Integer.parseInt(line.substring(3,5));
@@ -23,10 +23,10 @@ public class DayConvert {
                 month += 12;
                 year -= 1;
             }
-            int a = (int) (13 * (month + 1) / 5);
-            int b = (int) (year / 4);
-            int c = 6 * (int) (year / 100);
-            int d = (int) (year / 400);
+            int a = 13 * (month + 1) / 5;
+            int b = year / 4;
+            int c = 6 * year / 100;
+            int d = year / 400;
             int r = ((a + b + c + d + day + year)%7);
             System.out.println(a + " "+ b + " "+  c+ " "+  d);
             if (r == 0) {
@@ -46,9 +46,8 @@ public class DayConvert {
 
             System.out.print("Enter Quit If you would like to quit. Else enter next month, day, " +
                     "and year(MM/DD/YYYY):");
-
             line = sc.nextLine();
-
         }
+        sc.close();
     }
 }
