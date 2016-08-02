@@ -27,12 +27,25 @@ public class DataAnalysis {
         for (int i = 0; i < items.length; i++){
             sum = sum + items[i];
         }
-        //find max/min value
-        
         mean = (double) sum/items.length;
+
+        //find max/min value
+        int max = items[0];
+        int min = items[0];
+        for (int j = 1; j < items.length;j++){
+            if (items[j] > max){
+                max = items[j];
+            }
+            if (items[j] < min){
+                min = items[j];
+            }
+        }
+
+
         System.out.println("Mean value of array element is " + mean);
         System.out.println("Max value of array element is " + max);
         System.out.println("Min value of array element is " + min);
 
     }
+
 }
