@@ -1,6 +1,5 @@
-package com.labs.day2;
+package day2;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class DataAnalysis {

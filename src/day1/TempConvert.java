@@ -1,4 +1,4 @@
-package com.labs.day1;
+package day1;
 
 import java.util.Scanner;
 /**
