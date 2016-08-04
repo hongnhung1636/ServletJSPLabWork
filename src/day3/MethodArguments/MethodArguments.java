@@ -1,43 +1,31 @@
-package MethodArgumentsLab4;
+package day3.MethodArguments;
 
-public class MethodArgumentsLab4 {
+public class MethodArguments {
 
     private static String[] NUM = {"zero","one","two","three","four","five",
             "six","seven","eight","nine","ten"};
 
     public static void main(String[] args) {
-        System.out.println(addUp(3.2, 2.2,5.6));
-        System.out.println(addUp(1, 4,6));
-        System.out.println(addUp("one", "three", "five"));
-        System.out.println(addUp(2, 3.5, 6.1));
+        System.out.println(addUp(3.2, 2.2));
+        System.out.println(addUp(1, 4));
+        System.out.println(addUp("one", "three"));
+        System.out.println(addUp(2, 3.5));
         //this one can't be complied because there is no method take
         //in int and string
         //System.out.println(addUp(1, "three"));
     }
 
-    public static int addUp(int... args){
+    public static int addUp(int args1, int args2){
         System.out.println("Adding Int");
-        int total = 0;
-        for (int arg : args) {
-            total += arg;
-        }
-        return total;
+        return args1+ args2;
     }
-    public static double addUp(double... args){
+    public static double addUp(double args1, double args2){
         System.out.println("Adding Double");
-        double total = 0;
-        for (double arg : args) {
-            total += arg;
-        }
-        return total;
+        return args1+ args2;
     }
-    public static int addUp(String... args){
+    public static int addUp(String args1, String args2){
         System.out.println("Adding String");
-        int total = 0;
-        for (String  arg : args) {
-            total += toNumber(arg);
-        }
-        return total;
+        return toNumber(args1) + toNumber(args2);
     }
 
     private static int toNumber(String word){
