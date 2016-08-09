@@ -1,0 +1,5 @@
+1. create 2 interfaces one for withdraw (2 methods: the withdraw amount and number of withdraw )
+ and one for fee ( 1 method for fee apply)
+2. create 2 classes one for normal account that allow withdraw with restriction and one doesn't
+allow withdraw
+3. create 2 classes one charge fees for normal account and other does not allow special transaction
